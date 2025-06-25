@@ -74,11 +74,13 @@ const HeroSection = () => {
       </div>
       
       {/* Hide UnicornStudio watermark */}
-      <style jsx>{`
-        div[data-us-project] div:last-child {
-          display: none !important;
-        }
-      `}</style>
+      <style>
+        {`
+          div[data-us-project] div:last-child {
+            display: none !important;
+          }
+        `}
+      </style>
     </section>
   );
 };
