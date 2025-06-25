@@ -76,8 +76,14 @@ const HeroSection = () => {
       {/* Hide UnicornStudio watermark */}
       <style>
         {`
-          div[data-us-project] div:last-child {
+          div[data-us-project] div:last-child,
+          div[data-us-project] a[href*="unicorn.studio"],
+          div[data-us-project] a[href*="unicornstudio"],
+          div[data-us-project] *[style*="position: absolute"][style*="bottom"],
+          div[data-us-project] *[style*="position: fixed"][style*="bottom"] {
             display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
           }
         `}
       </style>
