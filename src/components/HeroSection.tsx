@@ -17,6 +17,18 @@ const HeroSection = () => {
         if (!window.UnicornStudio.isInitialized) {
           window.UnicornStudio.init();
           window.UnicornStudio.isInitialized = true;
+          
+          // Additional cleanup after UnicornStudio loads
+          setTimeout(() => {
+            const projectContainer = document.querySelector('[data-us-project]');
+            if (projectContainer) {
+              // Remove any elements that might be watermarks
+              const watermarkElements = projectContainer.querySelectorAll(
+                'a[href*="unicorn"], a[href*="UnicornStudio"], div[style*="position:absolute"], div[style*="position:fixed"], *[class*="watermark"], *[id*="watermark"]'
+              );
+              watermarkElements.forEach(el => el.remove());
+            }
+          }, 1000);
         }
       };
       (document.head || document.body).appendChild(script);
@@ -73,17 +85,52 @@ const HeroSection = () => {
         </motion.div>
       </div>
       
-      {/* Hide UnicornStudio watermark */}
+      {/* Comprehensive UnicornStudio watermark removal */}
       <style>
         {`
+          /* Hide all possible watermark elements */
           div[data-us-project] div:last-child,
-          div[data-us-project] a[href*="unicorn.studio"],
-          div[data-us-project] a[href*="unicornstudio"],
-          div[data-us-project] *[style*="position: absolute"][style*="bottom"],
-          div[data-us-project] *[style*="position: fixed"][style*="bottom"] {
+          div[data-us-project] div:first-child,
+          div[data-us-project] a,
+          div[data-us-project] a[href*="unicorn"],
+          div[data-us-project] a[href*="studio"],
+          div[data-us-project] a[href*="UnicornStudio"],
+          div[data-us-project] *[style*="position: absolute"],
+          div[data-us-project] *[style*="position: fixed"],
+          div[data-us-project] *[style*="bottom"],
+          div[data-us-project] *[style*="top"],
+          div[data-us-project] *[class*="watermark"],
+          div[data-us-project] *[id*="watermark"],
+          div[data-us-project] *[class*="credit"],
+          div[data-us-project] *[id*="credit"],
+          div[data-us-project] span,
+          div[data-us-project] p,
+          canvas + div,
+          canvas + a,
+          canvas ~ div:last-child,
+          canvas ~ a:last-child {
             display: none !important;
             visibility: hidden !important;
             opacity: 0 !important;
+            pointer-events: none !important;
+            width: 0 !important;
+            height: 0 !important;
+            overflow: hidden !important;
+            position: absolute !important;
+            left: -9999px !important;
+            top: -9999px !important;
+          }
+
+          /* Ensure canvas is visible but hide everything else */
+          div[data-us-project] canvas {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+          }
+
+          /* Additional cleanup for any remaining elements */
+          div[data-us-project] > div:not(:has(canvas)) {
+            display: none !important;
           }
         `}
       </style>
