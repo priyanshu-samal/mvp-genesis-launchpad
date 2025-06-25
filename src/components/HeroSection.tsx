@@ -7,7 +7,10 @@ const HeroSection = () => {
   useEffect(() => {
     // Load UnicornStudio script
     if (!window.UnicornStudio) {
-      window.UnicornStudio = { isInitialized: false };
+      window.UnicornStudio = { 
+        isInitialized: false,
+        init: () => {} // Provide empty function initially
+      };
       const script = document.createElement("script");
       script.src = "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.25/dist/unicornStudio.umd.js";
       script.onload = function() {
@@ -69,6 +72,13 @@ const HeroSection = () => {
           </Button>
         </motion.div>
       </div>
+      
+      {/* Hide UnicornStudio watermark */}
+      <style jsx>{`
+        div[data-us-project] div:last-child {
+          display: none !important;
+        }
+      `}</style>
     </section>
   );
 };
