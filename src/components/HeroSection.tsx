@@ -1,11 +1,36 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 const HeroSection = () => {
+  useEffect(() => {
+    // Load UnicornStudio script
+    if (!window.UnicornStudio) {
+      window.UnicornStudio = { isInitialized: false };
+      const script = document.createElement("script");
+      script.src = "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.25/dist/unicornStudio.umd.js";
+      script.onload = function() {
+        if (!window.UnicornStudio.isInitialized) {
+          window.UnicornStudio.init();
+          window.UnicornStudio.isInitialized = true;
+        }
+      };
+      (document.head || document.body).appendChild(script);
+    }
+  }, []);
+
   return (
-    <section className="min-h-screen bg-black flex items-center justify-center px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto text-center">
+    <section className="min-h-screen bg-black flex items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* UnicornStudio Background Animation */}
+      <div 
+        className="absolute inset-0 w-full h-full"
+        data-us-project="YQbc6EHLq0fPJmaGmk6b"
+        style={{ width: '100%', height: '100%' }}
+      />
+      
+      {/* Content overlay */}
+      <div className="max-w-4xl mx-auto text-center relative z-10">
         {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
