@@ -39,7 +39,7 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-8 lg:px-12">
         <div className="flex items-center justify-between h-16">
           {/* Logo and Brand */}
           <div className="flex items-center space-x-3">
@@ -66,7 +66,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center">
             <Button 
               size="sm" 
-              className="bg-white text-black hover:bg-gray-100 font-medium shadow-lg transition-all duration-200"
+              className="bg-white text-black hover:bg-gray-100 font-medium shadow-lg transition-all duration-200 rounded-full px-6"
             >
               Book a Call
             </Button>
@@ -110,7 +110,7 @@ const Navbar = () => {
                   <div className="border-t border-gray-700 pt-4">
                     <Button 
                       size="sm" 
-                      className="w-full bg-white text-black hover:bg-gray-100 font-medium shadow-lg"
+                      className="w-full bg-white text-black hover:bg-gray-100 font-medium shadow-lg rounded-full"
                     >
                       Book a Call
                     </Button>

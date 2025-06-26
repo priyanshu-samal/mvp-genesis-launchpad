@@ -12,7 +12,7 @@ const ProjectMarquee = () => {
   const duplicatedProjects = [...projects, ...projects];
 
   return (
-    <div className="w-full bg-black py-8 overflow-hidden border-t border-gray-800 mt-8">
+    <div className="w-full bg-black py-8 overflow-hidden border-t border-gray-800">
       <motion.div
         className="flex whitespace-nowrap"
         animate={{
