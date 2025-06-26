@@ -39,7 +39,7 @@ const HeroSection = () => {
     <section className="min-h-screen bg-black flex items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden pt-20">
       {/* UnicornStudio Background Animation */}
       <div 
-        className="absolute inset-0 w-full h-full"
+        className="absolute inset-0 w-full h-full z-0"
         data-us-project="YQbc6EHLq0fPJmaGmk6b"
         style={{ width: '100%', height: '100%' }}
       />
@@ -78,6 +78,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
+          className="mb-16"
         >
           <Button size="lg" className="text-lg px-8 py-3">
             Build With Us
