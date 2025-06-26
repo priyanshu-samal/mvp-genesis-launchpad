@@ -42,11 +42,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo and Brand */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-white rounded-md flex items-center justify-center">
-              <span className="text-black font-bold text-sm">M</span>
+          <div className="flex items-center space-x-3">
+            <div className="w-8 h-8 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-md flex items-center justify-center">
+              <span className="text-black font-bold text-sm">B</span>
             </div>
-            <span className="text-white font-bold text-lg">MVP Experience</span>
+            <span className="text-white font-bold text-xl">BuildMVPFast</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -55,31 +55,21 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-muted-foreground hover:text-accent-foreground transition-colors duration-200"
+                className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
               >
                 {item.name}
               </a>
             ))}
           </div>
 
-          {/* Right Side Buttons */}
-          <div className="hidden lg:flex items-center space-x-3">
-            <Button variant="outline" size="sm" className="text-black bg-white hover:bg-gray-100">
-              Login
+          {/* Right Side Button */}
+          <div className="hidden lg:flex items-center">
+            <Button 
+              size="sm" 
+              className="bg-white text-black hover:bg-gray-100 font-medium shadow-lg transition-all duration-200"
+            >
+              Book a Call
             </Button>
-            <Button size="sm">Sign Up</Button>
-            <AnimatePresence>
-              {isScrolled && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Button size="sm">Get Started</Button>
-                </motion.div>
-              )}
-            </AnimatePresence>
           </div>
 
           {/* Mobile Menu Button */}
@@ -111,17 +101,19 @@ const Navbar = () => {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="text-muted-foreground hover:text-accent-foreground transition-colors duration-200 py-2"
+                      className="text-gray-300 hover:text-white transition-colors duration-200 py-2 font-medium"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}
                     </a>
                   ))}
-                  <div className="border-t border-gray-700 pt-4 flex flex-col space-y-3">
-                    <Button variant="outline" size="sm" className="text-black bg-white hover:bg-gray-100">
-                      Login
+                  <div className="border-t border-gray-700 pt-4">
+                    <Button 
+                      size="sm" 
+                      className="w-full bg-white text-black hover:bg-gray-100 font-medium shadow-lg"
+                    >
+                      Book a Call
                     </Button>
-                    <Button size="sm">Sign Up</Button>
                   </div>
                 </div>
               </div>

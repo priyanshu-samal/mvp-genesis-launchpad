@@ -36,7 +36,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="min-h-screen bg-black flex items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section className="min-h-screen bg-black flex items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden pt-20">
       {/* UnicornStudio Background Animation */}
       <div 
         className="absolute inset-0 w-full h-full"
