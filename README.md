@@ -4,7 +4,7 @@ A professional and responsive website built for a client agency that specializes
 
 > 🎬 **Live Demo Video:**  
 Once deployed, you can watch the demo video here:  
-👉 [`/4aug.mvp.mp4`](./public/4aug.mvp.mp4)  
+👉 [`/4aug.mp4`](./public/4aug.mp4)
 _(Only accessible from browser after deployment)_
 
 ## 🛠️ Tech Stack
