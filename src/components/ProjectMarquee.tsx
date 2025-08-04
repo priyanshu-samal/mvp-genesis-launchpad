@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 
 const ProjectMarquee = () => {
@@ -20,7 +19,7 @@ const ProjectMarquee = () => {
             x: {
               repeat: Infinity,
               repeatType: "loop",
-              duration: 30,
+              duration: 8,
               ease: "linear",
             },
           }}

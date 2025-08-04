@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
@@ -80,9 +79,15 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mb-16"
         >
-          <Button size="lg" className="text-lg px-8 py-3">
-            Build With Us
-          </Button>
+          <a
+            href="https://cal.com/priyanshu-samal"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button size="lg" className="text-lg px-8 py-3">
+              Build With Us
+            </Button>
+          </a>
         </motion.div>
       </div>
       
