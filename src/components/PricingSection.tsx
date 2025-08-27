@@ -2,37 +2,37 @@ import React from "react";
 
 const plans = [
   {
-    name: "Standard",
+    name: "Standard Launch",
     badge: null,
-    price: "$1549 USD",
-    payment: "One Time Payment",
-    description: "One time payment for MVP Development",
+    price: "$1799 USD",
+    payment: "One-Time Payment",
+    description: "Launch your MVP quickly and validate your idea.",
     features: [
-      "MVP Development in 1 Month",
-      "Founder Led Development",
-      "Free Maintenance for Next Month",
-      "Scalable Tech Stack: Next.js, Supabase",
-      "Regular Updates",
+      "MVP Delivered in 4–6 Weeks",
+      "Founder-Led Development",
+      "Modern Tech Stack: Next.js, Supabase, Tailwind",
+      "2 Weeks Free Maintenance & Bug Fixes",
+      "Deployment + Documentation Included",
     ],
-    cta: "Reserve",
+    cta: "Book Standard Launch",
   },
   {
-    name: "Pro",
+    name: "Pro Partner",
     badge: "Most Popular",
-    price: "$2599 USD",
-    payment: "Recurring Payment",
-    description: "Recurring Payment for MVP Development",
+    price: "$1999 USD + $799/mo",
+    payment: "One-Time + Monthly Retainer",
+    description: "For founders who want a long-term product partner to build, scale, and grow.",
     features: [
-      "Everything in Standard +",
-      "Min 90 Hours of Development per Month",
-      "Time Flexibility",
-      "Continuous Maintenance and Updates",
-      "Quick Emergency Support",
-      "Marketing Support",
+      "Everything in Standard Launch +",
+      "Continuous Feature Development",
+      "Priority Support & Quick Fixes",
+      "Dedicated Slack/Email Access",
+      "Growth Support: Landing Pages, Analytics, Integrations",
     ],
-    cta: "Reserve",
+    cta: "Book Pro Partner",
   },
 ];
+
 
 const PricingSection = () => {
   return (
