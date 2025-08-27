@@ -69,7 +69,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-md text-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed"
         >
-          From rough ideas to launch-ready products — we design, develop, and deliver fast, clean MVPs that get traction, feedback, and early users.
+          From rough ideas to launch-ready products. We design, develop, and deliver fast, clean MVPs that gain traction, receive valuable feedback, and attract early users.
         </motion.p>
 
         {/* CTA Button */}
